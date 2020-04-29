@@ -28,6 +28,10 @@
     justify-content: flex-start;
 }
 
+.fa-caret-down:hover, .fa-caret-left:hover, .fa-caret-up:hover, .fa-caret-right:hover {
+    opacity: 0.5;
+}
+
 @media (min-width: 450px) {
     .bnj-fleches-directionnelles-container {
         width: 55vw;
