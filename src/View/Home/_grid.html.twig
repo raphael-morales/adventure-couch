@@ -21,7 +21,7 @@
                     {% set box= "x-" ~ j ~ "_" ~ "y-" ~ i  %}
                     {% if couch == box %}
                     <div id="{{ box }}" class="col-2 img-content px-0 gc-caseSize gc-icon1">
-                        <div><img class="couch" src="/assets/images/couch-solid.svg" alt="Picture of your coach"></div>
+                        <div><img class="couch" id="couch" src="/assets/images/couch-solid.svg" alt="Picture of your coach"></div>
                     </div>
                     {# detection si id box en cour = id iconOne #}
                     {% elseif iconOne == box %}
