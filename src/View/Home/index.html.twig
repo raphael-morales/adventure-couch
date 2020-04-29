@@ -1,6 +1,14 @@
 {% extends 'layout.html.twig' %}
 
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/_fleches_directionnelles.css">
+    <script src="https://kit.fontawesome.com/f0a8b2a9e8.js" crossorigin="anonymous"></script>
+{% endblock %}
+
 {% block content %}
+
+    {% include 'Home/_fleches_directionnelles.html.twig' %}
+
     <div class="title-block-gd">
         <h1>ADVENTURE COACH</h1>
         <ol>
@@ -9,4 +17,5 @@
             <li class="rules-list-gd col-8">et envole toi vers le niveau suivant !</li>
         </ol>
     </div>
+
 {% endblock %}
