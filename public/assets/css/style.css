@@ -1,0 +1,22 @@
+.rules-list-gd {
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.title-block-gd {
+    display: flex;
+    flex-direction: column;
+    background-color: palevioletred;
+    margin-bottom: 50px;
+}
+
+.icon {
+    width: 100%;
+    height: auto;
+    max-height: content-box;
+    border: none;
+}
+.gc-boxIcon {
+    display : flex;
+    flex-direction: column-reverse;
+}
