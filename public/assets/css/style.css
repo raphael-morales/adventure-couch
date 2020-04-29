@@ -20,3 +20,14 @@
     display : flex;
     flex-direction: column-reverse;
 }
+.sitDown {
+    background-color: palevioletred;
+    color: black;
+    border-color: palevioletred;
+    margin-top: 10px;
+}
+.sitDown:hover {
+    background-color: lightgreen;
+    color: black;
+    border-color: lightgreen;
+}
