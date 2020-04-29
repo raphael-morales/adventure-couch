@@ -1,6 +1,7 @@
 .gc-caseSize{
     height: 8vw;
     width : 8vw;
+
     background-color: #8fb7db;
     border: 1px solid white;
 }
@@ -13,7 +14,7 @@
     border: 1px solid black;
 }
 .gc-icon3{
-    background-color: black;
+    background-color: #4bb1b1;
     border: 1px solid white;
     color:white;
 }
