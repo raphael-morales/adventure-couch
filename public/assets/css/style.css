@@ -1,0 +1,11 @@
+
+.rules-list-gd {
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.title-block-gd {
+    display: flex;
+    flex-direction: column;
+    background-color: palevioletred;
+}
