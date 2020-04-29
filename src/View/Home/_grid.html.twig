@@ -1,0 +1,55 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+    {% set nbCol = 6 %}
+    {% set nbLine = 6 %}
+    {% set iconOne = "x-2_y-3" %}
+    {% set iconTwo =  'x-4_y-5' %}
+    {% set iconThree =  'x-1_y-4' %}
+    {% set iconFour =  'x-6_y-1' %}
+
+    {# pour chaque ligne #}
+    {% for i in 1..nbLine %}
+        <div class="container-fluid col-6 ">
+            {# formatage de la  ligne en row de 12 colones #}
+            <div class="row justify-content-center mx-0 flex-nowrap">
+                {# construction des colones#}
+                {% for j in 1..nbCol %}
+                    {# variable pour l'id des box ( div ) --> correspond aux coordonées codées sur la grille de type x et y #}
+                    {% set box= "x-" ~ j ~ "_" ~ "y-" ~ i  %}
+
+                    {# detection si id box en cour = id iconOne #}
+                    {% if iconOne == box %}
+                        <div id="{{ box }}" class="col-2 img-content px-0 gc-caseSize gc-icon1">
+                            <div>  ICON 1 HERE  </div>
+                        </div>
+                    {# detection si id box en cour = id iconTwo #}
+                    {% elseif iconTwo == box %}
+                        <div id="{{ box }}" class="col-2 img-content px-0 gc-caseSize gc-icon2">
+                            <div>  ICON 2 HERE  </div>
+                        </div>
+                    {# detection si id box en cour = id iconThree #}
+                    {% elseif iconThree == box %}
+                        <div id="{{ box }}" class="col-2 img-content px-0 gc-caseSize gc-icon3">
+                            <div>  ICON 3 HERE  </div>
+                        </div>
+                    {# detection si id box en cour = id iconFour #}
+                    {% elseif iconFour == box %}
+                        <div id="{{ box }}" class="col-2 img-content px-0 gc-caseSize gc-icon4">
+                            <div>  ICON 4 HERE  </div>
+                        </div>
+                    {# si aucun cas ne corespond affichage d'une box vide #}
+                    {% else %}
+                        <div id="{{ box }}" class="col-2 img-content px-0 gc-caseSize">
+                            <div> {{ idBox }} </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+
+            </div>
+        </div>
+    {% endfor %}
+
+
+{% endblock %}
