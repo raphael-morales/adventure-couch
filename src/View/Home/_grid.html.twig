@@ -5,14 +5,14 @@
     {% set nbCol = 6 %}
     {% set nbLine = 6 %}
     {% set couch = "x-" ~ couchPosition.abs ~ "_y-" ~ couchPosition.ord %}
-    {% set iconOne = 'x-2_y-3' %}
+    {% set tree = 'x-2_y-3' %}
     {% set iconTwo =  'x-4_y-5' %}
     {% set iconThree =  'x-1_y-4' %}
     {% set iconFour =  'x-6_y-1' %}
     {% set iconFive =  'x-1_y-1' %}
 
     {# pour chaque ligne #}
-    {% for i in 1..nbLine %}
+    {% for i in nbLine..1 %}
         <div class="container-fluid col-6 ">
             {# formatage de la  ligne en row de 12 colones #}
             <div class="row justify-content-center mx-0 flex-nowrap">
@@ -26,7 +26,7 @@
                     </div>
 
                     {# detection si id box en cour = id iconOne #}
-                    {% elseif iconOne == box %}
+                    {% elseif tree == box %}
                         <div id="{{ box }}" class="col-2 img-content px-0 gc-caseSize gc-boxIcon gc-icon1">
                             {# put icon 1 in div #}
                             <div> {% include "Home/_tree-solid.html.twig" %} </div>

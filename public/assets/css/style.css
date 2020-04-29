@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     background-color: palevioletred;
+    margin-bottom: 50px;
 }
 
 .icon {
@@ -15,7 +16,6 @@
     max-height: content-box;
     border: none;
 }
-
 .gc-boxIcon {
     display : flex;
     flex-direction: column-reverse;
