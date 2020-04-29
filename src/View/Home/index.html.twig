@@ -19,3 +19,15 @@
     {% include 'Home/_fleches_directionnelles.html.twig' %}
 
 {% endblock %}
+{% block javascripts %}
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="/assets/js/webcam.js" type="text/javascript"></script>
+    <script async type="text/javascript" src="https://webcams.windy.com/webcams/public/embed/script/player.js%22%3E"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            gestionModalWebCam();
+        });
+    </script>
+
+{% endblock %}
+

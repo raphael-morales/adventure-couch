@@ -21,3 +21,8 @@
     display : flex;
     flex-direction: column-reverse;
 }
+
+.gc-modal-height{
+    width: 100%;
+    height: auto;
+}
