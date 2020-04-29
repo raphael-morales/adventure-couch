@@ -21,6 +21,8 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+        $couch = new Couch(2, 2);
+        $couchPosition = $couch->getPosition();
+        return $this->twig->render('Home/index.html.twig', ['couchPosition' => $couchPosition]);
     }
 }
