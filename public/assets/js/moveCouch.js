@@ -1,8 +1,49 @@
+const arrowUp = document.getElementById('arrowUp');
+const arrowLeft = document.getElementById('arrowLeft');
+const arrowRight = document.getElementById('arrowRight');
+const arrowDown = document.getElementById('arrowDown');
+
 const couch = document.getElementById('couch');
 const question = document.getElementById('question')
+console.log(question.parentElement.style.display);
 
-// couch.parentElement.id = 'x-4_y-5';
 
-if (couch.parentElement.id === question.parentElement.id){
-    question.style.display = "none";
+
+function move(arrow) {
+    let sourceId = couch.parentElement.id;
+    const sourceArray = sourceId.split("");
+    if (arrow === "arrowUp" && sourceArray[6] < 6) {
+        sourceArray[6]++;
+    } else if (arrow === "arrowDown" && sourceArray[6] > 1) {
+        sourceArray[6]--;
+    } else if (arrow === "arrowLeft" && sourceArray[2] > 1) {
+        sourceArray[2]--;
+    } else if (arrow === "arrowRight" && sourceArray[2] < 6) {
+        sourceArray[2]++;
+    }
+
+    const destinationId = sourceArray.join("");
+
+    const destination = document.getElementById(destinationId);
+    destination.appendChild(couch);
+
+    if (couch.parentElement.id === question.parentElement.parentElement.id){
+        question.parentElement.style.display = "none";
+
+    }else{
+        question.parentElement.style.display = "";
+    }
 }
+
+arrowUp.addEventListener('click', function () {
+    move('arrowUp');
+});
+arrowDown.addEventListener('click', function () {
+    move('arrowDown');
+});
+arrowLeft.addEventListener('click', function () {
+    move('arrowLeft');
+});
+arrowRight.addEventListener('click', function () {
+    move('arrowRight');
+});
