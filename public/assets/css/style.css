@@ -1,4 +1,3 @@
-
 .rules-list-gd {
     font-style: italic;
     font-size: 1rem;
@@ -17,7 +16,7 @@
     border: none;
 }
 
-.gc-boxIcon{
+.gc-boxIcon {
     display : flex;
     flex-direction: column-reverse;
 }
