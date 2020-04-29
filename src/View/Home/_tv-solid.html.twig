@@ -9,12 +9,27 @@
             <span id="close" class="close col-1 ">&times;</span>
         </div>
         <div class="row">
-            <div class="col-1"> </div>
+            <div class="col-1"></div>
             <div class="col-10">
-                <a name="windy-webcam-timelapse-player" data-id="1511302382" data-play="month"
-                   href="https://windy.com/webcams/1511302382" target="_blank">lien</a>
-                <script async type="text/javascript"
-                        src="https://webcams.windy.com/webcams/public/embed/script/player.js"></script>
+                {% set var = random([0,1,2]) %}
+
+                {% if( var == 0) %}
+                    <a name="windy-webcam-timelapse-player" data-id="{{  webcams.0.id }}" data-play="month"
+                       href="https://windy.com/webcams/{{  webcams.0.id }}" target="_blank">lien</a>
+                    <script async type="text/javascript"
+                            src="https://webcams.windy.com/webcams/public/embed/script/player.js"></script>
+                    {% elseif var == 1 %}
+                    <a name="windy-webcam-timelapse-player" data-id="{{ webcams.1.id }}" data-play="month"
+                       href="https://windy.com/webcams/{{ webcams.1.id }}" target="_blank">lien</a>
+                    <script async type="text/javascript"
+                            src="https://webcams.windy.com/webcams/public/embed/script/player.js"></script>
+                    {% elseif var == 2 %}
+                    <a name="windy-webcam-timelapse-player" data-id="{{ webcams.2.id }}" data-play="month"
+                       href="https://windy.com/webcams/{{ webcams.2.id }}" target="_blank">lien</a>
+                    <script async type="text/javascript"
+                            src="https://webcams.windy.com/webcams/public/embed/script/player.js"></script>
+
+                {% endif %}
             </div>
         </div>
     </div>
