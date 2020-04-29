@@ -1,3 +1,4 @@
+.dstore
 /vendor/*
 *db.php*
 .idea/
