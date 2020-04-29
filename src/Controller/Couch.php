@@ -13,11 +13,11 @@ class Couch
     /*
      * @var array
      */
-    private $position = [0,0];
+    private $position = ['abs' => 1, 'ord' => 1];
 
     public function __construct(int $abs, int $ord)
     {
-        $this->position = [$abs,$ord];
+        $this->position = ['abs' => $abs, 'ord' => $ord];
     }
 
     public function getPosition()
