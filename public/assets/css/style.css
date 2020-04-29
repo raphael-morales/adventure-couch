@@ -10,7 +10,15 @@
     background-color: palevioletred;
 }
 
-.icon{
+.icon {
     width: 100%;
     height: auto;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+.gc-boxIcon{
+    display : flex;
+    flex-direction: column-reverse;
 }
