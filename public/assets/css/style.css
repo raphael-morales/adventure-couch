@@ -23,6 +23,7 @@
 }
 
 .gc-modal-height{
-    width: 100%;
+    min-height:400px;
     height: auto;
+
 }
