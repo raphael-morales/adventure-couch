@@ -21,8 +21,22 @@
     flex-direction: column-reverse;
 }
 
+
 .gc-modal-height{
     min-height:400px;
     height: auto;
 
 }
+
+.sitDown {
+    background-color: palevioletred;
+    color: black;
+    border-color: palevioletred;
+    margin-top: 10px;
+}
+.sitDown:hover {
+    background-color: lightgreen;
+    color: black;
+    border-color: lightgreen;
+}
+
