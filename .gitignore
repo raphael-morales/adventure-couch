@@ -1,0 +1,4 @@
+/vendor/*
+*db.php*
+.idea/
+.phpcs-cache
