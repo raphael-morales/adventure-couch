@@ -4,7 +4,8 @@
 
     {% set nbCol = 6 %}
     {% set nbLine = 6 %}
-    {% set iconOne = "x-2_y-3" %}
+    {% set couch = "x-" ~ couchPosition.abs ~ "_y-" ~ couchPosition.ord %}
+    {% set iconOne = 'x-2_y-3' %}
     {% set iconTwo =  'x-4_y-5' %}
     {% set iconThree =  'x-1_y-4' %}
     {% set iconFour =  'x-6_y-1' %}
@@ -19,8 +20,12 @@
                 {% for j in 1..nbCol %}
                     {# variable pour l'id des box ( div ) --> correspond aux coordonées codées sur la grille de type x et y #}
                     {% set box= "x-" ~ j ~ "_" ~ "y-" ~ i  %}
-
+                    {% if couch == box %}
+                    <div id="{{ box }}" class="col-2 img-content px-0 gc-caseSize gc-icon1">
+                        <div><img class="couch" src="/assets/images/couch-solid.svg" alt="Picture of your coach"></div>
+                    </div>
                     {# detection si id box en cour = id iconOne #}
+
                     {% if iconOne == box %}
                         <div id="{{ box }}" class="col-2 img-content px-0 gc-caseSize gc-icon1 gc-boxIcon">
                             {# put icon 1 in div #}
