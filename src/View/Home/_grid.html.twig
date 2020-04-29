@@ -9,7 +9,7 @@
     {% set iconTwo =  'x-4_y-5' %}
     {% set iconThree =  'x-1_y-4' %}
     {% set iconFour =  'x-6_y-1' %}
-    {% set iconFive =  'x-1_y-1' %}
+    {% set question =  'x-6_y-5' %}
 
     {# pour chaque ligne #}
     {% for i in 1..nbLine %}
@@ -48,6 +48,11 @@
                         <div id="{{ box }}" class="col-2 img-content px-0 gc-caseSize gc-icon4 gc-boxIcon">
                             {# put icon 4 in div #}
                             <div>  {% include "Home/_tv-solid.html.twig" %}  </div>
+                        </div>
+                    {% elseif question == box %}
+                        <div id="{{ box }}" class="col-2 img-content px-0 gc-caseSize gc-icon4 gc-boxIcon">
+                            {# put icon 5 in div #}
+                            <div id="question">  {% include "Home/_question-circle-regular.html.twig" %}  </div>
                         </div>
                     {# si aucun cas ne corespond affichage d'une box vide #}
                     {% else %}
