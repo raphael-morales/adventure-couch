@@ -57,7 +57,13 @@
 
         <div class="col">
             {# change lvl here with twig instead of 1#}
-            {% include "Home/_grid" ~ 3 ~ ".html.twig" %}
+            {% if level.0.levels_id == '1' %}
+                {% include "Home/_grid1.html.twig" %}
+            {% elseif level.0.levels_id == '2' %}
+                {% include "Home/_grid2.html.twig" %}
+            {% elseif level.0.levels_id == '3' %}
+                {% include "Home/_grid3.html.twig" %}
+            {% endif %}
         </div>
     </div>
 </div>

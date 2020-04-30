@@ -10,15 +10,15 @@ function gestionModalWebCam() {
 
     imgObjTv.addEventListener("click",() => {
         // modal set visible
-        modal.style.display = "block";
+        //modal.style.display = "block";
 
 
     });
 
     modalClose.addEventListener("click",() => {
         // modal set visible
-        console.log("_____ detection close nodal ____" );
-        modal.style.display = "none";
+        //console.log("_____ detection close nodal ____" );
+        //modal.style.display = "none";
     });
 
     document.addEventListener('click', function (e) {

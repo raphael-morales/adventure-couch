@@ -5,17 +5,10 @@ const arrowDown = document.getElementById('arrowDown');
 
 const couch = document.getElementById('couch');
 const question = document.getElementById('question');
+const tv = document.getElementById('tv');
 const mountain = document.getElementById('mountainImg');
 const tree = document.getElementById('treeImg');
 
-
-/*$(document).ready(function () {
-    $("#newModal").modal("show");
-
-    $("#button1").click(function () {
-        $("#newModal").modal("hide");
-    });
-});*/
 
 function move(arrow)
 {
@@ -41,11 +34,20 @@ function move(arrow)
     else {
         destination.appendChild(couch);
     }
-    if (couch.parentElement.id === question.parentElement.parentElement.id) {
-        question.parentElement.style.display = "none";
+    if (couch.parentElement.id === question.parentElement.id) {
+        question.style.display = "none";
         $("#exampleModalCenter").modal("show");
+        $("#exampleModalCenter").css("z-index", "1500");
+
+
+    } else if (couch.parentElement.id === tv.parentElement.parentElement.id) {
+        tv.parentElement.style.display = "none";
+        $("#modal-webcam").modal("show");
+        $("#modal-webcam").css("z-index", "1500");
     } else {
         question.parentElement.style.display = "";
+        tv.parentElement.style.display = "";
+        $("#modal-webcam").modal("hide");
         $("#exampleModalCenter").modal("hide");
     }
 }
@@ -62,3 +64,19 @@ arrowLeft.addEventListener('click', function () {
 arrowRight.addEventListener('click', function () {
     move('arrowRight');
 });
+
+
+function validAnswer1()
+{
+    window.open("/Home/level/2")
+}
+
+function validAnswer2()
+{
+    window.open("/Home/level/3")
+}
+
+function validAnswer3()
+{
+    window.alert("Vous avez gagné !")
+}

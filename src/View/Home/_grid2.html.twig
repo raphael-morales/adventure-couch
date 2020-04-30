@@ -3,7 +3,6 @@
     {% set nbLine = 6 %}
     {% set couch = "x-" ~ couchPosition.abs ~ "_y-" ~ couchPosition.ord %}
     {% set tree = 'x-1_y-5' %}
-    {% set plane =  'x-6_y-6' %}
     {% set mountain1 =  'x-1_y-4' %}
     {% set mountain2 =  'x-2_y-4' %}
     {% set mountain3 =  'x-2_y-5' %}
@@ -40,7 +39,7 @@
                     {% elseif plane == box %}
                         <div id="{{ box }}" class="col-2 img-content px-0 gc-caseSize gc-icon2 gc-boxIcon">
                             {# put icon 2 in div #}
-                            <div>  {% include "Home/_plane-departure-solid.html.twig" %}  </div>
+                            <div><a href="../level/3"><img class="icon" src="/assets/images/plane-departure-solid.svg"></a></div>
                         </div>
                         {# detection si id box en cour = id iconThree #}
                     {% elseif mountain1 == box %}
@@ -50,37 +49,37 @@
                         </div>
                     {% elseif mountain2 == box %}
                         <div id="{{ box }}"
-                             class="mountain alpes col-2 img-content px-0 gc-caseSize gc-icon3 gc-boxIcon">
+                             class="mountain  col-2 img-content px-0 gc-caseSize gc-icon3 gc-boxIcon">
                             {# put icon 3 in div #}
                             <div>  {% include "Home/_mountain-solid.html.twig" %}  </div>
                         </div>
                     {% elseif mountain3 == box %}
                         <div id="{{ box }}"
-                             class="mountain alpes col-2 img-content px-0 gc-caseSize gc-icon3 gc-boxIcon">
+                             class="mountain  col-2 img-content px-0 gc-caseSize gc-icon3 gc-boxIcon">
                             {# put icon 3 in div #}
                             <div>  {% include "Home/_mountain-solid.html.twig" %}  </div>
                         </div>
                     {% elseif mountain4 == box %}
                         <div id="{{ box }}"
-                             class="mountain alpes col-2 img-content px-0 gc-caseSize gc-icon3 gc-boxIcon">
+                             class="mountain  col-2 img-content px-0 gc-caseSize gc-icon3 gc-boxIcon">
                             {# put icon 3 in div #}
                             <div>  {% include "Home/_mountain-solid.html.twig" %}  </div>
                         </div>
                     {% elseif mountain5 == box %}
                         <div id="{{ box }}"
-                             class="mountain alpes col-2 img-content px-0 gc-caseSize gc-icon3 gc-boxIcon">
+                             class="mountain  col-2 img-content px-0 gc-caseSize gc-icon3 gc-boxIcon">
                             {# put icon 3 in div #}
                             <div>  {% include "Home/_mountain-solid.html.twig" %}  </div>
                         </div>
                     {% elseif mountain6 == box %}
                         <div id="{{ box }}"
-                             class="mountain alpes col-2 img-content px-0 gc-caseSize gc-icon3 gc-boxIcon">
+                             class="mountain  col-2 img-content px-0 gc-caseSize gc-icon3 gc-boxIcon">
                             {# put icon 3 in div #}
                             <div>  {% include "Home/_mountain-solid.html.twig" %}  </div>
                         </div>
                     {% elseif mountain7 == box %}
                         <div id="{{ box }}"
-                             class="mountain alpes col-2 img-content px-0 gc-caseSize gc-icon3 gc-boxIcon">
+                             class="mountain col-2 img-content px-0 gc-caseSize gc-icon3 gc-boxIcon">
                             {# put icon 3 in div #}
                             <div>  {% include "Home/_mountain-solid.html.twig" %}  </div>
                         </div>
