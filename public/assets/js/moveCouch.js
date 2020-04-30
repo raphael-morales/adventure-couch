@@ -5,6 +5,9 @@ const arrowDown = document.getElementById('arrowDown');
 
 const couch = document.getElementById('couch');
 const question = document.getElementById('question');
+const mountain = document.getElementById('mountainImg');
+const tree = document.getElementById('treeImg');
+
 
 /*$(document).ready(function () {
     $("#newModal").modal("show");

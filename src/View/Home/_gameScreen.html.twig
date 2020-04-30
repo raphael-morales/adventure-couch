@@ -42,7 +42,8 @@
             </div>
         </div>
         <div class="col">
-            {% include "Home/_grid.html.twig" %}
+            {# change lvl here with twig instead of 1#}
+            {% include "Home/_grid" ~ 3 ~ ".html.twig" %}
         </div>
     </div>
 </div>
