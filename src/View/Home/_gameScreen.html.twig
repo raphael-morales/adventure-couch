@@ -1,11 +1,26 @@
-<div class="container-fluid col-12 ">
-    <div class="row justify-content-center mx-0 flex-nowrap">
-        <div>
-            {% if pseudo %}
+<div class="menu">
+    {% if pseudo %}
+    <h3>Bon voyage, {{ pseudo }} !</h3>
+    {% else %}
+    <form method="POST" action="">
+        <input type="text" class="form-control" name="pseudo" placeholder="Pseudo">
+        <button type="submit" class="btn btn-primary sitDown">Pose-toi sur ton canap'</button>
+    </form>
+    {% endif %}
+    <img class="" id="pinkCouch" src="/assets/images/couch-solid.svg">
+    <img class="" id="blackCouch" src="/assets/images/couch-black.svg">
+    <img class="" id="yellowCouch" src="/assets/images/couch-yellow.svg">
+    <img class="" id="blueCouch" src="/assets/images/couch-blue.svg">
+</div>
+
+{#
+<div class="container">
+    <div class="row">
+        {% if pseudo %}
             <div class="col">
                 <h3>Bon voyage, {{ pseudo }} !</h3>
             </div>
-            {% else %}
+        {% else %}
             <form method="POST" action="">
                 <div class="col">
                     <input type="text" class="form-control" name="pseudo" placeholder="Pseudo">
@@ -14,33 +29,32 @@
                     <button type="submit" class="btn btn-primary sitDown">Pose-toi sur ton canap'</button>
                 </div>
             </form>
-            {% endif %}
-            {# Change your couch color #}
-            <div>
-                <div class="col-12">
-                    <h3>Change de canap'</h3>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div id="{{ box }}" class="col-3 offset-1 img-content px-0 gc-caseSize gc-boxIcon">
-                            <div><img class="icon" id="pinkCouch" src="/assets/images/couch-solid.svg"></div>
-                        </div>
-                        <div id="{{ box }}" class="col-3 offset-1 img-content px-0 gc-caseSize gc-boxIcon">
-                            <div><img class="icon" id="blackCouch" src="/assets/images/couch-black.svg"></div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div id="{{ box }}" class="col-3 offset-1 img-content px-0 gc-caseSize gc-boxIcon">
-                            <div><img class="icon" id="yellowCouch" src="/assets/images/couch-yellow.svg"></div>
-                        </div>
-                        <div id="{{ box }}" class="col-3 offset-1 img-content px-0 gc-caseSize gc-boxIcon">
-                            <div><img class="icon" id="blueCouch" src="/assets/images/couch-blue.svg"></div>
-                        </div>
-                    </div>
-
-                </div>
+        {% endif %}
+        <div>
+            <div class="col-12">
+                <h3>Change de canap'</h3>
+            </div>
+            <div id="changeCouch" class="col-3 img-content px-0 gc-caseSize gc-boxIcon">
+                <div><img class="icon" id="pinkCouch" src="/assets/images/couch-solid.svg"></div>
+            </div>
+            <div id="changeCouch" class="col-3 img-content px-0 gc-caseSize gc-boxIcon">
+                <div><img class="icon" id="blackCouch" src="/assets/images/couch-black.svg"></div>
+            </div>
+            <div id="changeCouch" class="col-3 img-content px-0 gc-caseSize gc-boxIcon">
+                <div><img class="icon" id="yellowCouch" src="/assets/images/couch-yellow.svg"></div>
+            </div>
+            <div id="changeCouch" class="col-3 offset-1 img-content px-0 gc-caseSize gc-boxIcon">
+                <div><img class="icon" id="blueCouch" src="/assets/images/couch-blue.svg"></div>
             </div>
         </div>
+    </div>
+</div>
+#}
+
+<div class="container-fluid col-12 ">
+    <div class="row justify-content-center mx-0 flex-nowrap">
+        {% include 'Home/_fleches_directionnelles.html.twig' %}
+
         <div class="col">
             {# change lvl here with twig instead of 1#}
             {% include "Home/_grid" ~ 3 ~ ".html.twig" %}

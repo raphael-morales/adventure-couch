@@ -55,3 +55,19 @@ h3 {
     color: black;
     border-color: lightgreen;
 }
+.changeCouch {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu {
+    display: flex;
+    align-items: flex-start;
+    height: 100px;
+}
+
+.pinkCouch .blackCouch .yellowCouch .blueCouch {
+    width: 100%;
+    height: auto;
+    display: block;
+}
