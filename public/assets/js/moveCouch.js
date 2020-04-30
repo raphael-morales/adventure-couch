@@ -4,10 +4,10 @@ const arrowRight = document.getElementById('arrowRight');
 const arrowDown = document.getElementById('arrowDown');
 
 const couch = document.getElementById('couch');
-const question = document.getElementById('question')
-console.log(question.parentElement.style.display);
+const question = document.getElementById('question');
+const modalQuestion = document.getElementById("exampleModalCenter");
 
-
+$('#exampleModalCenter')
 
 function move(arrow) {
     let sourceId = couch.parentElement.id;
@@ -29,7 +29,6 @@ function move(arrow) {
 
     if (couch.parentElement.id === question.parentElement.parentElement.id){
         question.parentElement.style.display = "none";
-
     }else{
         question.parentElement.style.display = "";
     }
