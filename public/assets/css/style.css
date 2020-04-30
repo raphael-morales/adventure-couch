@@ -1,3 +1,9 @@
+h3 {
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .rules-list-gd {
     font-style: italic;
     font-size: 1rem;
@@ -38,10 +44,10 @@
     color: black;
     border-color: palevioletred;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 .sitDown:hover {
     background-color: lightgreen;
     color: black;
     border-color: lightgreen;
 }
-
