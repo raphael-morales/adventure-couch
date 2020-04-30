@@ -31,25 +31,19 @@ function move(arrow)
     const destinationId = sourceArray.join("");
 
     const destination = document.getElementById(destinationId);
-<<<<<<< HEAD
-    console.log(destination.className);
     if (destination.className.search('alpes') !== -1)
     {
         window.alert("Impossible de traverser les Alpes en canap'")
     }
-    else
-    {
+    else {
         destination.appendChild(couch);
-=======
-    destination.appendChild(couch);
-
+    }
     if (couch.parentElement.id === question.parentElement.parentElement.id) {
         question.parentElement.style.display = "none";
         $("#exampleModalCenter").modal("show");
     } else {
         question.parentElement.style.display = "";
         $("#exampleModalCenter").modal("hide");
->>>>>>> 2c7e0ca7ec904c194b7b81bc381132763026e22e
     }
 }
 
