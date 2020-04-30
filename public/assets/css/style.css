@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     background-color: palevioletred;
+    margin-bottom: 50px;
 }
 
 .icon {
@@ -20,11 +21,27 @@
     display: block;
 }
 
-.icon_couch{
-
-}
-
 .gc-boxIcon {
     display : flex;
     flex-direction: column-reverse;
 }
+
+
+.gc-modal-height{
+    min-height:400px;
+    height: auto;
+
+}
+
+.sitDown {
+    background-color: palevioletred;
+    color: black;
+    border-color: palevioletred;
+    margin-top: 10px;
+}
+.sitDown:hover {
+    background-color: lightgreen;
+    color: black;
+    border-color: lightgreen;
+}
+

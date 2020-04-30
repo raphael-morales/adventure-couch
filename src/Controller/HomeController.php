@@ -21,8 +21,14 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        $couch = new Couch(1, 1);
+
+        // display pseudo of user
+        $pseudo = '';
+        if (!empty($_POST)) {
+            $pseudo = trim($_POST['pseudo']);
+        }
+        $couch = new Couch(2, 2);
         $couchPosition = $couch->getPosition();
-        return $this->twig->render('Home/index.html.twig', ['couchPosition' => $couchPosition]);
+        return $this->twig->render('Home/index.html.twig', ['couchPosition' => $couchPosition, 'pseudo' => $pseudo]);
     }
 }
