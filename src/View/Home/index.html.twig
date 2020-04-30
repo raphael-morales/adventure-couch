@@ -1,21 +1,34 @@
 {% extends 'layout.html.twig' %}
 
+{% block title %}Adventure Couch{% endblock %}
+
 {% block stylesheet %}
     <link rel="stylesheet" href="/assets/css/_fleches_directionnelles.css">
     <script src="https://kit.fontawesome.com/f0a8b2a9e8.js" crossorigin="anonymous"></script>
 {% endblock %}
 
+{%  block titlePage %}
+{% endblock %}
+
 {% block content %}
+<!-- Pour yu ghi yo, ci-dessous id pour webcams -->
+        {{ webcams.0.id }}
+        {{ webcams.1.id }}
+        {{ webcams.2.id }}
+
     <div class="title-block-gd">
-        <h1>ADVENTURE COACH</h1>
+        <h1>ADVENTURE COUCH</h1>
         <ol>
             <li class="rules-list-gd col-8">Trouve les indices...</li>
             <li class="rules-list-gd col-8">Réponds à la question...</li>
             <li class="rules-list-gd col-8">et envole toi vers le niveau suivant !</li>
         </ol>
     </div>
-    
-    {% include "Home/_grid.html.twig" %}
+
+    {% include 'Home/_gameScreen.html.twig' %}
     {% include 'Home/_fleches_directionnelles.html.twig' %}
 
+{% endblock %}
+{% block javascripts %}
+    <script type="text/javascript" src="/assets/js/moveCouch.js"></script>
 {% endblock %}

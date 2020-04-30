@@ -1,24 +1,21 @@
 .gc-caseSize{
     height: 8vw;
     width : 8vw;
-    background-color: #8fb7db;
+
+    background-color: lightgreen;
     border: 1px solid white;
 }
 .gc-icon1{
-    background-color: red;
-    border: 1px solid black;
+    border: 1px solid white;
 }
 .gc-icon2{
-    background-color: orange;
-    border: 1px solid black;
+    border: 1px solid white;
 }
 .gc-icon3{
-    background-color: #4bb1b1;
     border: 1px solid white;
     color:white;
 }
 .gc-icon4{
-    background-color: yellowgreen;
     border: 1px solid white;
     color:white;
 }

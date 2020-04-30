@@ -1,5 +1,6 @@
-/vendor/
-db.php
+.dstore
+/vendor/*
+*db.php*
 .idea/
-
+.phpcs-cache
 

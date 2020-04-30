@@ -1,4 +1,3 @@
-
 .rules-list-gd {
     font-style: italic;
     font-size: 1rem;
@@ -8,17 +7,27 @@
     display: flex;
     flex-direction: column;
     background-color: palevioletred;
+    margin-bottom: 50px;
 }
 
 .icon {
     width: 100%;
     height: auto;
-    margin: 0px;
-    padding: 0px;
+    max-height: content-box;
     border: none;
 }
-
-.gc-boxIcon{
+.gc-boxIcon {
     display : flex;
     flex-direction: column-reverse;
+}
+.sitDown {
+    background-color: palevioletred;
+    color: black;
+    border-color: palevioletred;
+    margin-top: 10px;
+}
+.sitDown:hover {
+    background-color: lightgreen;
+    color: black;
+    border-color: lightgreen;
 }

@@ -5,15 +5,15 @@
     {% set nbCol = 6 %}
     {% set nbLine = 6 %}
     {% set couch = "x-" ~ couchPosition.abs ~ "_y-" ~ couchPosition.ord %}
-    {% set iconOne = 'x-2_y-3' %}
+    {% set tree = 'x-2_y-3' %}
     {% set iconTwo =  'x-4_y-5' %}
     {% set iconThree =  'x-1_y-4' %}
     {% set iconFour =  'x-6_y-1' %}
     {% set iconFive =  'x-1_y-1' %}
 
     {# pour chaque ligne #}
-    {% for i in 1..nbLine %}
-        <div class="container-fluid col-6 ">
+    {% for i in nbLine..1 %}
+        <div class="container-fluid col-12 ">
             {# formatage de la  ligne en row de 12 colones #}
             <div class="row justify-content-center mx-0 flex-nowrap">
                 {# construction des colones#}
@@ -21,12 +21,13 @@
                     {# variable pour l'id des box ( div ) --> correspond aux coordonées codées sur la grille de type x et y #}
                     {% set box= "x-" ~ j ~ "_" ~ "y-" ~ i  %}
                     {% if couch == box %}
-                    <div id="{{ box }}" class="col-2 img-content px-0 gc-caseSize gc-icon1">
-                        <div><img class="couch" src="/assets/images/couch-solid.svg" alt="Picture of your coach"></div>
+                    <div id="{{ box }}" class="col-2 img-content px-0 gc-caseSize gc-boxIcon">
+                        <div id="couch"> {% include "Home/_couch-solid.html.twig" %} </div>
                     </div>
+
                     {# detection si id box en cour = id iconOne #}
-                    {% elseif iconOne == box %}
-                        <div id="{{ box }}" class="col-2 img-content px-0 gc-caseSize gc-icon1 gc-boxIcon">
+                    {% elseif tree == box %}
+                        <div id="{{ box }}" class="col-2 img-content px-0 gc-caseSize gc-boxIcon gc-icon1">
                             {# put icon 1 in div #}
                             <div> {% include "Home/_tree-solid.html.twig" %} </div>
                         </div>
