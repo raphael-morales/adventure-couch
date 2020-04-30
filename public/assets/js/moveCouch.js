@@ -21,7 +21,15 @@ function move(arrow) {
     const destinationId = sourceArray.join("");
 
     const destination = document.getElementById(destinationId);
-    destination.appendChild(couch);
+    console.log(destination.className);
+    if (destination.className.search('alpes') !== -1)
+    {
+        window.alert("Impossible de traverser les Alpes en canap'")
+    }
+    else
+    {
+        destination.appendChild(couch);
+    }
 }
 
 arrowUp.addEventListener('click', function () {
