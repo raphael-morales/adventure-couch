@@ -21,6 +21,7 @@ class HomeController extends AbstractController
      */
     public function index()
     {
+
         // display pseudo of user
         $pseudo = '';
         if (!empty($_POST)) {

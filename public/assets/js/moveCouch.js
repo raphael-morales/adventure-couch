@@ -4,8 +4,18 @@ const arrowRight = document.getElementById('arrowRight');
 const arrowDown = document.getElementById('arrowDown');
 
 const couch = document.getElementById('couch');
+const question = document.getElementById('question');
 
-function move(arrow) {
+/*$(document).ready(function () {
+    $("#newModal").modal("show");
+
+    $("#button1").click(function () {
+        $("#newModal").modal("hide");
+    });
+});*/
+
+function move(arrow)
+{
     let sourceId = couch.parentElement.id;
     const sourceArray = sourceId.split("");
     if (arrow === "arrowUp" && sourceArray[6] < 6) {
@@ -21,6 +31,7 @@ function move(arrow) {
     const destinationId = sourceArray.join("");
 
     const destination = document.getElementById(destinationId);
+<<<<<<< HEAD
     console.log(destination.className);
     if (destination.className.search('alpes') !== -1)
     {
@@ -29,6 +40,16 @@ function move(arrow) {
     else
     {
         destination.appendChild(couch);
+=======
+    destination.appendChild(couch);
+
+    if (couch.parentElement.id === question.parentElement.parentElement.id) {
+        question.parentElement.style.display = "none";
+        $("#exampleModalCenter").modal("show");
+    } else {
+        question.parentElement.style.display = "";
+        $("#exampleModalCenter").modal("hide");
+>>>>>>> 2c7e0ca7ec904c194b7b81bc381132763026e22e
     }
 }
 

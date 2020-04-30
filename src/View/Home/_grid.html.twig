@@ -1,9 +1,15 @@
 
+<<<<<<< HEAD
+=======
+{% block content %}
+    {% include "Home/_modal_question.html.twig"%}
+>>>>>>> 2c7e0ca7ec904c194b7b81bc381132763026e22e
 
     {% set nbCol = 6 %}
     {% set nbLine = 6 %}
     {% set couch = "x-" ~ couchPosition.abs ~ "_y-" ~ couchPosition.ord %}
     {% set tree = 'x-2_y-3' %}
+<<<<<<< HEAD
     {% set plane =  'x-4_y-5' %}
     {% set mountain =  'x-1_y-4' %}
     {% set Alpes1 =  'x-6_y-4' %}
@@ -14,6 +20,12 @@
 
     {% set tv =  'x-6_y-1' %}
     {% set iconFive =  'x-1_y-1' %}
+=======
+    {% set iconTwo =  'x-4_y-5' %}
+    {% set iconThree =  'x-1_y-4' %}
+    {% set iconFour =  'x-6_y-1' %}
+    {% set question =  'x-6_y-5' %}
+>>>>>>> 2c7e0ca7ec904c194b7b81bc381132763026e22e
 
     {# pour chaque ligne #}
     {% for i in nbLine..1 %}
@@ -84,6 +96,11 @@
                         <div id="{{ box }}" class="col-2 img-content px-0 gc-caseSize gc-icon4 gc-boxIcon">
                             {# put icon 4 in div #}
                             <div>  {% include "Home/_tv-solid.html.twig" %}  </div>
+                        </div>
+                    {% elseif question == box %}
+                        <div id="{{ box }}" class="col-2 img-content px-0 gc-caseSize gc-icon4 gc-boxIcon">
+                            {# put icon 5 in div #}
+                            <div>  {% include "Home/_question-circle-regular.html.twig" %}  </div>
                         </div>
                     {# si aucun cas ne corespond affichage d'une box vide #}
                     {% else %}
