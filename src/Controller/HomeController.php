@@ -33,8 +33,6 @@ class HomeController extends AbstractController
         $level = $questionManager->selectQuestionsByLevel($id);
         $webcams = $this->getWebcams($id);
 
-        //region Le code a jeff
-        // ----------- coupable := ) JEFF ------------------------------------------------------------------------------
         $pseudo = '';
         if (!empty($_POST)) {
             $pseudo = trim($_POST['pseudo']);
@@ -43,7 +41,6 @@ class HomeController extends AbstractController
         $couchPosition = $couch->getPosition();
         //--------------------------------------------------------------------------------------------------------------
         //endregion
-
         return $this->twig->render('Home/index.html.twig', ['level' => $level, 'webcams' =>
             $webcams['result']['webcams'], 'couchPosition' => $couchPosition, 'pseudo' => $pseudo]);
     }

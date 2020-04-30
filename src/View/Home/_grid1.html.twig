@@ -3,7 +3,6 @@
     {% set nbLine = 6 %}
     {% set couch = "x-" ~ couchPosition.abs ~ "_y-" ~ couchPosition.ord %}
     {% set tree = 'x-2_y-3' %}
-    {% set plane =  'x-4_y-5' %}
     {% set mountain =  'x-1_y-4' %}
     {% set Alpes1 =  'x-6_y-4' %}
     {% set Alpes2 =  'x-6_y-5' %}
@@ -90,7 +89,7 @@
                             <div>  {% include "Home/_tv-solid.html.twig" %}  </div>
                         </div>
                     {% elseif question == box %}
-                        <div id="{{ box }}" class="col-2 img-content px-0 gc-caseSize gc-icon4 gc-boxIcon">
+                        <div id="{{ box }}" class="question col-2 img-content px-0 gc-caseSize gc-icon4 gc-boxIcon">
                             {# put icon 5 in div #}
                             <div id="question">  {% include "Home/_question-circle-regular.html.twig" %}  </div>
                         </div>

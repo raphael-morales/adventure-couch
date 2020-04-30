@@ -10,14 +10,6 @@ const mountain = document.getElementById('mountainImg');
 const tree = document.getElementById('treeImg');
 
 
-/*$(document).ready(function () {
-    $("#newModal").modal("show");
-
-    $("#button1").click(function () {
-        $("#newModal").modal("hide");
-    });
-});*/
-
 function move(arrow)
 {
     let sourceId = couch.parentElement.id;
@@ -42,8 +34,8 @@ function move(arrow)
     else {
         destination.appendChild(couch);
     }
-    if (couch.parentElement.id === question.parentElement.parentElement.id) {
-        question.parentElement.style.display = "none";
+    if (couch.parentElement.id === question.parentElement.id) {
+        question.style.display = "none";
         $("#exampleModalCenter").modal("show");
         $("#exampleModalCenter").css("z-index", "1500");
 
@@ -72,3 +64,19 @@ arrowLeft.addEventListener('click', function () {
 arrowRight.addEventListener('click', function () {
     move('arrowRight');
 });
+
+
+function validAnswer1()
+{
+    window.open("/Home/level/2")
+}
+
+function validAnswer2()
+{
+    window.open("/Home/level/3")
+}
+
+function validAnswer3()
+{
+    window.alert("Vous avez gagné !")
+}

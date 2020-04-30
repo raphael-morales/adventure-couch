@@ -71,3 +71,8 @@ h3 {
     height: auto;
     display: block;
 }
+
+.goodAnswer {
+    text-decoration: none;
+    color: white;
+}
