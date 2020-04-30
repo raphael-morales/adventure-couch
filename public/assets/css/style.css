@@ -29,9 +29,13 @@ h3 {
 
 .gc-boxIcon {
     display : flex;
+    justify-content: center;
     flex-direction: column-reverse;
 }
-
+.gc-boxIcon.div {
+    display: flex;
+    align-items: center;
+}
 
 .gc-modal-height{
     min-height:400px;

@@ -6,6 +6,9 @@ const arrowDown = document.getElementById('arrowDown');
 const couch = document.getElementById('couch');
 const question = document.getElementById('question');
 const tv = document.getElementById('tv');
+const mountain = document.getElementById('mountainImg');
+const tree = document.getElementById('treeImg');
+
 
 /*$(document).ready(function () {
     $("#newModal").modal("show");
@@ -32,8 +35,13 @@ function move(arrow)
     const destinationId = sourceArray.join("");
 
     const destination = document.getElementById(destinationId);
-    destination.appendChild(couch);
-
+    if (destination.className.search('alpes') !== -1)
+    {
+        window.alert("Impossible de traverser les Alpes en canap'")
+    }
+    else {
+        destination.appendChild(couch);
+    }
     if (couch.parentElement.id === question.parentElement.parentElement.id) {
         question.parentElement.style.display = "none";
         $("#exampleModalCenter").modal("show");
