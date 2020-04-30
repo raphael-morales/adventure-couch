@@ -4,8 +4,18 @@ const arrowRight = document.getElementById('arrowRight');
 const arrowDown = document.getElementById('arrowDown');
 
 const couch = document.getElementById('couch');
+const question = document.getElementById('question');
 
-function move(arrow) {
+/*$(document).ready(function () {
+    $("#newModal").modal("show");
+
+    $("#button1").click(function () {
+        $("#newModal").modal("hide");
+    });
+});*/
+
+function move(arrow)
+{
     let sourceId = couch.parentElement.id;
     const sourceArray = sourceId.split("");
     if (arrow === "arrowUp" && sourceArray[6] < 6) {
@@ -22,6 +32,14 @@ function move(arrow) {
 
     const destination = document.getElementById(destinationId);
     destination.appendChild(couch);
+
+    if (couch.parentElement.id === question.parentElement.parentElement.id) {
+        question.parentElement.style.display = "none";
+        $("#exampleModalCenter").modal("show");
+    } else {
+        question.parentElement.style.display = "";
+        $("#exampleModalCenter").modal("hide");
+    }
 }
 
 arrowUp.addEventListener('click', function () {

@@ -16,6 +16,11 @@
     max-height: content-box;
     border: none;
 }
+
+.icon_question{
+    display: block;
+}
+
 .gc-boxIcon {
     display : flex;
     flex-direction: column-reverse;
