@@ -5,6 +5,7 @@ const arrowDown = document.getElementById('arrowDown');
 
 const couch = document.getElementById('couch');
 const question = document.getElementById('question');
+const tv = document.getElementById('tv');
 
 /*$(document).ready(function () {
     $("#newModal").modal("show");
@@ -36,8 +37,17 @@ function move(arrow)
     if (couch.parentElement.id === question.parentElement.parentElement.id) {
         question.parentElement.style.display = "none";
         $("#exampleModalCenter").modal("show");
+        $("#exampleModalCenter").css("z-index", "1500");
+
+
+    } else if (couch.parentElement.id === tv.parentElement.parentElement.id) {
+        tv.parentElement.style.display = "none";
+        $("#modal-webcam").modal("show");
+        $("#modal-webcam").css("z-index", "1500");
     } else {
         question.parentElement.style.display = "";
+        tv.parentElement.style.display = "";
+        $("#modal-webcam").modal("hide");
         $("#exampleModalCenter").modal("hide");
     }
 }
