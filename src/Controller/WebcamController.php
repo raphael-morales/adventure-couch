@@ -26,12 +26,20 @@ class WebcamController extends AbstractController
 
     public function show(string $country)
     {
+        $realCountry = "FR";
+        if ($country === "niv1") {
+            $realCountry = "FR";
+        } elseif ($country === "niv2") {
+            $realCountry = "AE";
+        } elseif ($country === "niv3") {
+            $realCountry = "JP";
+        }
         $client = HttpClient::create();
-        $response = $client->request('GET', "https://api.windy.com/api/webcams/v2/list/country=$country/
+        $response = $client->request('GET', "https://api.windy.com/api/webcams/v2/list/country=$realCountry/
         category=city/orderby=popularity,desc/limit=3?key=7SWJ1kS5vuhNx8oNB2Fv3zTLH2uS2PvM");
         $webcams = $response->toArray();
         //var_dump($webcams);
         //var_dump($webcams['result']['webcams']);
-        return $this->twig->render('Home/index.html.twig', ['webcams'=>$webcams['result']['webcams']]);
+        return $this->twig->render('Home/index.html.twig', ['webcams' => $webcams['result']['webcams']]);
     }
 }
